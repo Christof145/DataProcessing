@@ -1,0 +1,19 @@
+{
+    "$schema": "./CountryHappyness_Schema.json",
+    "Countries": [
+        {
+            "Country": "Argentina",
+            "Happyness_Rank": 24,
+            "Happyness_Score": 6.59899997711182,
+            "Whisker_high": 6.69008508607745,
+            "Whisker_low": 6.50791486814618,
+            "Economy": 1.18529546260834,
+            "Family": 1.44045114517212,
+            "Life_Expectancy": 0.695137083530426,
+            "Freedom": 0.494519203901291,
+            "Generosity": 0.109457060694695,
+            "Gov_Trust": 0.08484,
+            "Dystopia_Residual": 2.61400532722473
+        }
+    ]
+}
