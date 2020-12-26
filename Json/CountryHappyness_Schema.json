@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/CountryHappyness.schema.json",
+    "type": "object",
+    "properties": {
+        "Countries": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/CountryHappyness" }
+        }
+    },
+    "definitions": {
+        "CountryHappyness": {
+            "type": "object",
+            "required": [ "Country", "Happyness_Rank", "Happyness_Score", "Whisker_high", "Whisker_low", "Economy", "Family", "Life_Expectancy", "Freedom", "Generosity", "Gov_Trust", "Dystopia_Residual" ],
+            "properties":   {
+                "Country":  {
+                    "type": "string",
+                    "description": "The name of the country."
+                },
+                "Happyness_Rank": {
+                    "type": "integer",
+                    "description": "The happyness rank of the country globaly."
+                },
+                "Happyness_Score": {
+                    "type": "number",
+                    "description": "The population's happyness via survey."
+                },
+                "Whisker_high": {
+                    "type": "number",
+                    "description": "The upper limit of the data gathered."
+                },
+                "Whisker_low": {
+                    "type": "number",
+                    "description": "The lower limit of the data gathered."
+                },
+                "Economy": {
+                    "type": "number",
+                    "description": "The extent to which GDP contributes to the calculation of the Happiness Score."
+                },
+                "Family": {
+                    "type": "number",
+                    "description": "The amount of people moving to/out of the countryThe extent to which Family contributes to the calculation of the Happiness Score."
+                },
+                "Life_Expectancy": {
+                    "type": "number",
+                    "description": "The extent to which Life expectancy contributed to the calculation of the Happiness Score."
+                },
+                "Freedom": {
+                    "type": "number",
+                    "description": "The extent to which Freedom contributed to the calculation of the Happiness Score."
+                },
+                "Generosity": {
+                    "type": "number",
+                    "description": "The extent to which generosity contributed to the calculation of the Happiness Score."
+                },
+                "Gov_Trust": {
+                    "type": "number",
+                    "description": "The extent to which Perception of Corruption contributes to Happiness Score."
+                },
+                "Dystopia_Residual": {
+                    "type": "number",
+                    "description": "the score of a hypothetical country that has a lower rank than the lowest ranking country on the report."
+                }
+            }
+        }
+    }
+}
