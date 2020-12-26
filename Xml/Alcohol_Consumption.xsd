@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Alcohol_Consumption_Per_Country">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Country" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="Name"/>
+                            <xs:element type="xs:integer" name="Beer_Servings" default="0"/>
+							<xs:element type="xs:integer" name="Spirit_Servings" default="0"/>
+							<xs:element type="xs:integer" name="Wine_Servings" default="0"/>
+							<xs:element type="xs:float" name="Total_Liters_Of_Pure_Alcohol" default="0.0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
