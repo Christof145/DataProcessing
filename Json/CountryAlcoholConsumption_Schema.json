@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/CountryAlcoholConsumption.schema.json",
+    "type": "object",
+    "properties": {
+        "Countries": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/CountryAlcoholConsumption" }
+        }
+    },
+    "definitions": {
+        "CountryAlcoholConsumption": {
+            "type": "object",
+            "required": [ "Country", "Beer_Servings", "Spirit_Servings", "Wine_Servings", "Total_Liters_Of_Pure_Alcohol" ],
+            "properties":   {
+                "Country":  {
+                    "type": "string",
+                    "description": "The name of the country."
+                },
+                "Beer_Servings": {
+                    "type": "integer",
+                    "description": "The happyness rank of the country globaly."
+                },
+                "Spirit_Servings": {
+                    "type": "integer",
+                    "description": "The population's happyness via survey."
+                },
+                "Wine_Servings": {
+                    "type": "integer",
+                    "description": "The standard error of the data gathered."
+                },
+                "Total_Liters_Of_Pure_Alcohol": {
+                    "type": "number",
+                    "description": "The extent to which GDP contributes to the calculation of the Happiness Score."
+                }
+            }
+        }
+    }
+}

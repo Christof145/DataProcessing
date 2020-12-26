@@ -1,0 +1,99 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/CountryGDP.schema.json",
+    "type": "object",
+    "properties": {
+        "Countries": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/CountryGDP" }
+        }
+    },
+    "definitions": {
+        "CountryGDP": {
+            "type": "object",
+            "required": [ "Country", "Region", "Population", "Area", "Population_Density", "Coastline", "Net_Migration", "Infant_Mortality", "GDP", "Literacy" ],
+            "properties":   {
+                "Country":  {
+                    "type": "string",
+                    "description": "The name of the country."
+                },
+                "Region": {
+                    "type": "string",
+                    "description": "The region of the country."
+                },
+                "Population": {
+                    "type": "integer",
+                    "description": "The population of the country."
+                },
+                "Area": {
+                    "type": "integer",
+                    "description": "The region of the country."
+                },
+                "Population_Density": {
+                    "type": "number",
+                    "description": "The population per square Kilometer."
+                },
+                "Coastline": {
+                    "type": "number",
+                    "description": "The length of coastline the country has."
+                },
+                "Net_Migration": {
+                    "type": "number",
+                    "description": "The amount of people moving to/out of the country."
+                },
+                "Infant_Mortality": {
+                    "type": "number",
+                    "description": "The infant mortality rate of the country."
+                },
+                "GDP": {
+                    "type": "integer",
+                    "description": "The gross domestic product of the country."
+                },
+                "Literacy": {
+                    "type": "number",
+                    "description": "The persentage of litirate poeple in the country."
+                },
+                "Phones": {
+                    "type": "number",
+                    "description": "The amount of phones per 1000 poeple in the country."
+                },
+                "Arable": {
+                    "type": "number",
+                    "description": "The amount of suitble crop soil."
+                },
+                "Crops": {
+                    "type": "number",
+                    "description": "Crop production."
+                },
+                "Other": {
+                    "type": "number",
+                    "description": "Other factors at play of GDP."
+                },
+                "Climate": {
+                    "type": "integer",
+                    "description": "The climate of the country."
+                },
+                "Birthrate": {
+                    "type": "number",
+                    "description": "The amount of poeple born per year in the country."
+                },
+                "Deathrate": {
+                    "type": "number",
+                    "description": "The amount of poeple deaceased per year in the country."
+                },
+                "Agriculture": {
+                    "type": "number",
+                    "description": "The amount that agriculture plays a role in the GDP in a country."
+                },
+                "Industry": {
+                    "type": "number",
+                    "description": "The amount that industry plays a role in the GDP in a country."
+                },
+                "Service": {
+                    "type": "number",
+                    "description": "Military service required in the country."
+                }
+            }
+        }
+    }
+}
