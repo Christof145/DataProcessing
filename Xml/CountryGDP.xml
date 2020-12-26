@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CountryGDP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CountryGDP.xsd">
+    <Country>
+        <Name>Argentina</Name>
+        <Region>LATIN AMER. CARIB</Region>
+        <Population>39921833</Population>
+        <Area>2766890</Area>
+        <Population_Density>14.4</Population_Density>
+        <Coastline>0.18</Coastline>
+        <Net_Migration>0.61</Net_Migration>
+        <Infant_Mortality>15.18</Infant_Mortality>
+        <GDP>11200</GDP>
+        <Literacy>97.1</Literacy>
+        <Phones>220.4</Phones>
+        <Arable>12.31</Arable>
+        <Crops>0.48</Crops>
+        <Other>87.21</Other>
+        <Climate>3</Climate>
+        <Birthrate>16.73</Birthrate>
+        <Deathrate>7.55</Deathrate>
+        <Agriculture>0.095</Agriculture>
+        <Industry>0.358</Industry>
+        <Service>0.547</Service>
+    </Country>
+</CountryGDP>
