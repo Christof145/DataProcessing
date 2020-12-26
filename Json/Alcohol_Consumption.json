@@ -1,0 +1,12 @@
+{
+    "$schema": "./CountryAlcoholConsumption_Schema.json",
+    "Countries": [
+        {
+            "Country": "Argentina",
+            "Beer_Servings": 193,
+            "Spirit_Servings": 25,
+            "Wine_Servings": 221,
+            "Total_Liters_Of_Pure_Alcohol": 8.3
+        }
+    ]
+}
