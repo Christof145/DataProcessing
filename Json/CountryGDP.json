@@ -1,0 +1,27 @@
+{
+    "$schema": "./CountryGDP_Schema.json",
+    "Countries": [
+        {
+            "Country": "Argentina",
+            "Region": "LATIN AMER. & CARIB",
+            "Population": 39921833,
+            "Area": 2766890,
+            "Population_Density": 14.4,
+            "Coastline": 0.18,
+            "Net_Migration": 0.61,
+            "Infant_Mortality": 15.18,
+            "GDP": 11200,
+            "Literacy": 97.1,
+            "Phones": 220.4,
+            "Arable": 12.31,
+            "Crops": 0.48,
+            "Other": 87.21,
+            "Climate": 3,
+            "Birthrate": 16.73,
+            "Deathrate": 7.55,
+            "Agriculture": 0.095,
+            "Industry": 0.358,
+            "Service": 0.547
+        }
+    ]
+}
