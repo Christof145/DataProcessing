@@ -5,10 +5,9 @@ const mysql = require('mysql');
 var dbconnection = require('./DBConnection.js');
 
 //  Retrieve all countries JSON
-app.get('/countries', function (req, res) {
-        dbconnection.query('SELECT * FROM countryhapyness', function (error, results, fields) {
+app.get('/countryhappyness', function (req, res) {
+        dbconnection.query('SELECT * FROM countryhappyness', function (error, results, fields) {
             if (error) throw error;
-
             if (req.headers['content-type'] == "application/json"){
                 return res.send({Countries: results})
             } else if (req.headers['content-type'] == "application/xml"){
@@ -16,3 +15,4 @@ app.get('/countries', function (req, res) {
             }
         });
 });
+module.exports = app;

@@ -7,7 +7,7 @@ const dbConn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'world'
+    database: 'WorldData'
 });
 
 dbConn.connect();
