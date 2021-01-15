@@ -3,25 +3,17 @@
     "Countries": [
         {
             "Country": "Argentina",
-            "Region": "LATIN AMER. & CARIB",
-            "Population": 39921833,
-            "Area": 2766890,
-            "Population_Density": 14.4,
-            "Coastline": 0.18,
-            "Net_Migration": 0.61,
-            "Infant_Mortality": 15.18,
-            "GDP": 11200,
-            "Literacy": 97.1,
-            "Phones": 220.4,
-            "Arable": 12.31,
-            "Crops": 0.48,
-            "Other": 87.21,
-            "Climate": 3,
-            "Birthrate": 16.73,
-            "Deathrate": 7.55,
-            "Agriculture": 0.095,
-            "Industry": 0.358,
-            "Service": 0.547
+            "Country_Code": "ARG",
+            "GDP_2000": 7708.1,
+            "Suicide_Rate_2000": 9.5,
+            "GDP_2005": 5109.85,
+            "Suicide_Rate_2005": 9,
+            "GDP_2010": 10386,
+            "Suicide_Rate_2010": 8.7,
+            "GDP_2015": 13789.1,
+            "Suicide_Rate_2015": 8.8,
+            "GDP_2016": 12790.2,
+            "Suicide_Rate_2016": 9.2
         }
     ]
 }
