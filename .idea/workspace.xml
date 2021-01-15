@@ -21,9 +21,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christof\Documents\GitHub\DataProcessing\Selects" />
+      <recent name="C:\Users\Christof\Documents\GitHub\DataProcessing\Application" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -34,6 +47,12 @@
       <option name="presentableId" value="Default" />
       <updated>1609858078873</updated>
       <workItem from="1609858082333" duration="42000" />
+      <workItem from="1609927200925" duration="10000" />
+      <workItem from="1610387527333" duration="3635000" />
+      <workItem from="1610439756963" duration="6000" />
+      <workItem from="1610439910025" duration="15954000" />
+      <workItem from="1610488275388" duration="22270000" />
+      <workItem from="1610700247943" duration="364000" />
     </task>
     <servers />
   </component>
