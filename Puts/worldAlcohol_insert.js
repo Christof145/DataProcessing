@@ -6,7 +6,7 @@ var xmlValidator = require('xsd-schema-validator');
 
 var validate = validator({
     "type": 'object',
-    "required": ['Country', "beer_servings", "spirit_servings", "wine_servings", "total_liters_of_alcohol"],
+    "required": ["Country", "beer_servings", "spirit_servings", "wine_servings", "total_liters_of_alcohol"],
     "properties": {
         Country: {
             type: 'string'
@@ -54,6 +54,7 @@ app.post('/countryalcohol', (req, res, next) => {
         var sql = `INSERT INTO countryalcohol (Country, beer_servings, spirit_servings, wine_servings, total_liters_of_alcohol) VALUES ("${jsonObj.country.country[0]}", "${jsonObj.country.beer_servings[0]}", "${jsonObj.country.spirit_servings[0]}", "${jsonObj.country.wine_servings[0]}", "${jsonObj.country.total_liters_of_alcohol[0]}")`;
         
         xmlValidator.validateXML(xmlText,'../Xml/countryalcohol_isvalid.xsd', (error, result) => {
+            console.log(result)
             dbconnection.query(sql, function (error, result) {
                 if (error) {
                     throw error;

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-        <xs:element name="Country">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element type="xs:string" name="Country"/>
-                    <xs:element type="xs:float" name="beer_servings" default="0.0"/>
-                    <xs:element type="xs:float" name="spirit_servings" default="0.0"/>
-                    <xs:element type="xs:float" name="wine_servings" default="0.0"/>
-                    <xs:element type="xs:float" name="total_liters_of_alcohol" default="0.0"/>
-                </xs:sequence>
-            </xs:complexType>
-    </xs:element>
-</xs:schema>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <xsd:element name="Country">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element type="xsd:string" name="Country"/>
+                    <xsd:element type="xsd:float" name="beer_servings" default="0.0"/>
+                    <xsd:element type="xsd:float" name="spirit_servings" default="0.0"/>
+                    <xsd:element type="xsd:float" name="wine_servings" default="0.0"/>
+                    <xsd:element type="xsd:float" name="total_liters_of_alcohol" default="0.0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
