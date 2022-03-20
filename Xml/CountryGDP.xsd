@@ -6,33 +6,18 @@
                 <xs:element name="Country" maxOccurs="unbounded" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element type="xs:string" name="Name"/>
-                            <xs:element type="xs:string" name="Region"/>
-                            <xs:element type="xs:integer" name="Population" default="0"/>
-                            <xs:element type="xs:integer" name="Area" default="0"/>
-                            <xs:element type="xs:float" name="Population_Density" default="0.0"/>
-                            <xs:element type="xs:float" name="Coastline" default="0.0"/>
-                            <xs:element type="xs:float" name="Net_Migration" default="0.0"/>
-                            <xs:element type="xs:float" name="Infant_Mortality" default="0.0"/>
-                            <xs:element type="xs:integer" name="GDP" default="0"/>
-                            <xs:element name="Literacy" default="0.0">
-								<xs:simpleType>
-									<xs:restriction base="xs:float">
-										<xs:minInclusive value="0.0"/>
-										<xs:maxInclusive value="100.0"/>
-									</xs:restriction>
-								</xs:simpleType>	
-                            </xs:element>
-                            <xs:element type="xs:float" name="Phones" default="0.0"/>
-                            <xs:element type="xs:float" name="Arable" default="0.0"/>
-                            <xs:element type="xs:float" name="Crops" default="0.0"/>
-                            <xs:element type="xs:float" name="Other" default="0.0"/>
-                            <xs:element type="xs:integer" name="Climate" default="0"/>
-                            <xs:element type="xs:float" name="Birthrate" default="0.0"/>
-                            <xs:element type="xs:float" name="Deathrate" default="0.0"/>
-                            <xs:element type="xs:float" name="Agriculture" default="0.0"/>
-                            <xs:element type="xs:float" name="Industry" default="0.0"/>
-                            <xs:element type="xs:float" name="Service" default="0.0"/>
+                            <xs:element type="xs:string" name="Country"/>
+                            <xs:element type="xs:string" name="Country_Code"/>
+                            <xs:element type="xs:float" name="GDP_2000" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2000" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2005" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2005" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2010" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2010" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2015" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2015" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2016" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2016" default="0.0"/>
                         </xs:sequence> 
                     </xs:complexType>
                 </xs:element>

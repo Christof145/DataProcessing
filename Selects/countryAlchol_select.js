@@ -7,13 +7,13 @@ const xml = require('object-to-xml');
 
 //  Retrieve all countries JSON
 app.get('/countryalchol', function (req, res) {
-        dbconnection.query('SELECT * FROM countryalcohol', function (error, results) {
-            if (error) throw error;
-            if (req.headers['content-type'] === "application/json"){
-                res.send({Countries: results})
-            } else if (req.headers['content-type'] === "application/xml") {
-                res.send(xml({Countries:{Country : results}}));
-            }
-        });
+    dbconnection.query('SELECT * FROM countryalcohol', function (error, results) {
+        if (error) throw error;
+        if (req.headers['content-type'] === "application/json"){
+            res.send({Countries: results})
+        } else if (req.headers['content-type'] === "application/xml") {
+            res.send(xml({Countries:{Country : results}}));
+        }
+    });
 });
 module.exports = app;
