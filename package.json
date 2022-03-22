@@ -32,6 +32,5 @@
     "xml": "^1.0.1",
     "xml2js": "^0.4.23",
     "xsd-schema-validator": "^0.6.0"
-  },
-  "devDependencies": {}
+  }
 }

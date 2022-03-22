@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const dbconnection = require('../DBConnection.js');
 var validator = require('is-my-json-valid');
-var xmlValidator = require('xsd-schema-validator');
-var builder = require('xmlbuilder');
+var xmlvalidator = require('xsd-schema-validator');
 
 var validate = validator({
     "type": 'object',
@@ -78,36 +77,43 @@ app.post('/updateCountrygdp', (req, res, next) => {
         var json = JSON.stringify(req.body);
         var jsonObj = JSON.parse(json);
 
-        // var xml = builder.create('Country')
-        // .ele('Country', {'type': 'xsd:string'}, jsonObj.country.country[0]).up()
-        // .ele('Country_Code', {'type': 'xsd:string'}, jsonObj.country.country_code[0]).up()
-        // .ele('GDP_2000', {'type': 'xsd:float'}, jsonObj.country.gdp_2000[0]).up()
-        // .ele('Suicide_Rate_2000', {'type': 'xs:float'}, jsonObj.country.suicide_rate_2000[0]).up()
-        // .ele('GDP_2005', {'type': 'xs:float'}, jsonObj.country.gdp_2005[0]).up()
-        // .ele('Suicide_Rate_2005', {'type': 'xs:float'}, jsonObj.country.suicide_rate_2005[0]).up()
-        // .ele('GDP_2010', {'type': 'xs:float'}, jsonObj.country.gdp_2010[0]).up()
-        // .ele('Suicide_Rate_2010', {'type': 'xs:float'}, jsonObj.country.suicide_rate_2010[0]).up()
-        // .ele('GDP_2015', {'type': 'xs:float'}, jsonObj.country.gdp_2015[0]).up()
-        // .ele('Suicide_Rate_2015', {'type': 'xs:float'}, jsonObj.country.suicide_rate_2015[0]).up()
-        // .ele('GDP_2016', {'type': 'xs:float'}, jsonObj.country.gdp_2016[0]).up()
-        // .ele('Suicide_Rate_2016', {'type': 'xs:float'}, jsonObj.country.suicide_rate_2016[0]).up()
-        // .end({ pretty: true});
-
-        // console.log(xml);
-        var xmlText =  `<?xml version="1.0" encoding="UTF-8" ?><Country><Country>${jsonObj.country.country[0]}</Country><Country_Code>${jsonObj.country.country_code[0]}</Country_Code><GDP_2000>${jsonObj.country.gdp_2000[0]}</GDP_2000><Suicide_Rate_2000>${jsonObj.country.suicide_rate_2000[0]}</Suicide_Rate_2000><GDP_2005>${jsonObj.country.gdp_2005[0]}</GDP_2005><Suicide_Rate_2005>${jsonObj.country.suicide_rate_2005[0]}</Suicide_Rate_2005><GDP_2010>${jsonObj.country.gdp_2010[0]}</GDP_2010><Suicide_Rate_2010>${jsonObj.country.suicide_rate_2010[0]}</Suicide_Rate_2010><GDP_2015>${jsonObj.country.gdp_2015[0]}</GDP_2015><Suicide_Rate_2015>${jsonObj.country.suicide_rate_2015[0]}</Suicide_Rate_2015><GDP_2016>${jsonObj.country.gdp_2016[0]}</GDP_2016><Suicide_Rate_2016>${jsonObj.country.suicide_rate_2016[0]}</Suicide_Rate_2016></Country>`;
-        // var sql = `INSERT INTO countrygdp (Country, Country_Code, GDP_2000, Suicide_Rate_2000, GDP_2005, Suicide_Rate_2005, GDP_2010, Suicide_Rate_2010, GDP_2015, Suicide_Rate_2015, GDP_2016, Suicide_Rate_2016) VALUES ("${jsonObj.country.country[0]}", "${jsonObj.country.country_code[0]}", "${jsonObj.country.gdp_2000[0]}", "${jsonObj.country.suicide_rate_2000[0]}", "${jsonObj.country.gdp_2005[0]}", "${jsonObj.country.suicide_rate_2005[0]}", "${jsonObj.country.gdp_2010[0]}", "${jsonObj.country.suicide_rate_2010[0]}", "${jsonObj.country.gdp_2015[0]}", "${jsonObj.country.suicide_rate_2015[0]}", "${jsonObj.country.gdp_2016[0]}", "${jsonObj.country.suicide_rate_2016[0]}")`;
-        var sql = `UPDATE countrygdp set Country_Code = '${jsonObj.country.country_code[0]}' , GDP_2000 = ${jsonObj.country.gdp_2000[0]} , Suicide_Rate_2000 = ${jsonObj.country.suicide_rate_2000[0]} , GDP_2005 = ${jsonObj.country.gdp_2005[0]} , Suicide_Rate_2005 =${jsonObj.country.suicide_rate_2005[0]} , GDP_2010 =${jsonObj.country.gdp_2010[0]} , Suicide_Rate_2010 =${jsonObj.country.suicide_rate_2010[0]} , GDP_2015 =${jsonObj.country.gdp_2015[0]} , Suicide_Rate_2015 =${jsonObj.country.suicide_rate_2015[0]} , GDP_2016 =${jsonObj.country.gdp_2016[0]} , Suicide_Rate_2016 =${jsonObj.country.suicide_rate_2016[0]} WHERE Country = '${jsonObj.country.country[0]}'`;
-        // xmlValidator.validateXML(xml,'../Xml/CountryGDP.xsd', (error, result) => {
-            console.log(sql)
-            dbconnection.query(sql, [`${jsonObj.country.country_code[0]}, ${jsonObj.country.gdp_2000[0]}, ${jsonObj.country.suicide_rate_2000[0]}, ${jsonObj.country.gdp_2005[0]}, ${jsonObj.country.suicide_rate_2005[0]}, ${jsonObj.country.gdp_2010[0]}, ${jsonObj.country.suicide_rate_2010[0]}, ${jsonObj.country.gdp_2015[0]}, ${jsonObj.country.suicide_rate_2015[0]}, ${jsonObj.country.gdp_2016[0]}, ${jsonObj.country.suicide_rate_2016[0]}, ${jsonObj.country.country[0]}`], function (error, result) {
-                if (error) {
-                    throw error;
-                }else {
-                    res.status(200).send(xmlText);
-                    console.log
+        // var xmlText =  `<Country><Country>${jsonObj.country.country[0]}</Country><Country_Code>${jsonObj.country.country_code[0]}</Country_Code><GDP_2000>${jsonObj.country.gdp_2000[0]}</GDP_2000><Suicide_Rate_2000>${jsonObj.country.suicide_rate_2000[0]}</Suicide_Rate_2000><GDP_2005>${jsonObj.country.gdp_2005[0]}</GDP_2005><Suicide_Rate_2005>${jsonObj.country.suicide_rate_2005[0]}</Suicide_Rate_2005><GDP_2010>${jsonObj.country.gdp_2010[0]}</GDP_2010><Suicide_Rate_2010>${jsonObj.country.suicide_rate_2010[0]}</Suicide_Rate_2010><GDP_2015>${jsonObj.country.gdp_2015[0]}</GDP_2015><Suicide_Rate_2015>${jsonObj.country.suicide_rate_2015[0]}</Suicide_Rate_2015><GDP_2016>${jsonObj.country.gdp_2016[0]}</GDP_2016><Suicide_Rate_2016>${jsonObj.country.suicide_rate_2016[0]}</Suicide_Rate_2016></Country>`;
+        let avalidator = require('xsd-schema-validator')
+        try{
+            console.log('here');
+            avalidator.validateXML(req, 'Xml/CountryGDP.xsd', function(err, result) {
+                if (err) {
+                    console.log('in err here')
+                    return next(err)
                 }
+                console.log('passed error if: ', result.valid)
+                result.valid; // true
+                return res.status(200).json({
+                    message: 'xml validated and correct'
+                });
             });
-        // });
+        } catch (e) {
+            console.log(e)
+        }
+        // try {
+        //     xmlvalidator.validateXML(req, 'Xml/CountryGDP.xsd', function(err, result) {
+        //         console.log(result.valid);
+        //         if (err === true) {
+        //             return next(err);
+        //         }
+        //         var sql = `UPDATE countrygdp set Country_Code = '${jsonObj.country.country_code[0]}' , GDP_2000 = ${jsonObj.country.gdp_2000[0]} , Suicide_Rate_2000 = ${jsonObj.country.suicide_rate_2000[0]} , GDP_2005 = ${jsonObj.country.gdp_2005[0]} , Suicide_Rate_2005 =${jsonObj.country.suicide_rate_2005[0]} , GDP_2010 =${jsonObj.country.gdp_2010[0]} , Suicide_Rate_2010 =${jsonObj.country.suicide_rate_2010[0]} , GDP_2015 =${jsonObj.country.gdp_2015[0]} , Suicide_Rate_2015 =${jsonObj.country.suicide_rate_2015[0]} , GDP_2016 =${jsonObj.country.gdp_2016[0]} , Suicide_Rate_2016 =${jsonObj.country.suicide_rate_2016[0]} WHERE Country = '${jsonObj.country.country[0]}'`;
+        //         dbconnection.query(sql, [`${jsonObj.country.country_code[0]}, ${jsonObj.country.gdp_2000[0]}, ${jsonObj.country.suicide_rate_2000[0]}, ${jsonObj.country.gdp_2005[0]}, ${jsonObj.country.suicide_rate_2005[0]}, ${jsonObj.country.gdp_2010[0]}, ${jsonObj.country.suicide_rate_2010[0]}, ${jsonObj.country.gdp_2015[0]}, ${jsonObj.country.suicide_rate_2015[0]}, ${jsonObj.country.gdp_2016[0]}, ${jsonObj.country.suicide_rate_2016[0]}, ${jsonObj.country.country[0]}`], function (error, result) {
+        //             if (error) {
+        //                 throw error;
+        //             }else {
+        //                 res.status(200).send(sql);
+        //                 console.log
+        //             }
+        //         });
+        //         });
+        // } catch (error) {
+        //     throw error
+        // }
     }
 });
 

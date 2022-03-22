@@ -14,9 +14,10 @@ const worldAlcohol_insert = require('../Puts/worldAlcohol_insert.js');
 const worldHappyness_insert = require('../Puts/worldHappyness_insert.js');
 const worldGDP_update = require('../Updates/worldGDP_update.js');
 const worldHappyness_update = require('../Updates/worldHappyness_update.js');
+const worldAlcohol_update = require('../Updates/worldAlcohol_update.js');
 const worldHappyness_select = require('../Selects/countryHappyness_select.js');
 const worldGDP_select = require('../Selects/countryGDP_select.js');
-const worldAlchol_select = require('../Selects/countryAlchol_select.js');
+const worldAlcohol_select = require('../Selects/countryAlcohol_select.js');
 
 //use defined routes
 app.use('/worldGDP_insert', worldGDP_insert);
@@ -24,9 +25,10 @@ app.use('/worldAlcohol_insert', worldAlcohol_insert);
 app.use('/worldHappyness_insert', worldHappyness_insert);
 app.use('/worldGDP_update', worldGDP_update);
 app.use('/worldHappyness_update', worldHappyness_update);
+app.use('/worldAlcohol_update', worldAlcohol_update);
 app.use('/worldGDP_select', worldGDP_select);
 app.use('/worldHappyness_select', worldHappyness_select);
-app.use('/worldAlchol_select', worldAlchol_select);
+app.use('/worldAlcohol_select', worldAlcohol_select);
 
 
 //setting port
