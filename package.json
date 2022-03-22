@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/Christof145/DataProcessing#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "body-parser": "^1.19.2",
     "express": "^4.17.3",
     "express-xml-bodyparser": "^0.3.0",
     "is-my-json-valid": "^2.20.6",
+    "joi": "^17.6.0",
     "js2xmlparser": "^4.0.2",
     "mysql": "^2.18.1",
     "node-fetch": "2.0",

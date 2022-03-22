@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Country">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element type="xs:string" name="Country"/>
-        <xs:element type="xs:string" name="Country_Code"/>
-        <xs:element type="xs:int" name="GDP_2000"/>
-        <xs:element type="xs:int" name="Suicide_Rate_2000"/>
-        <xs:element type="xs:float" name="GDP_2005"/>
-        <xs:element type="xs:float" name="Suicide_Rate_2005"/>
-        <xs:element type="xs:float" name="GDP_2010"/>
-        <xs:element type="xs:float" name="Suicide_Rate_2010"/>
-        <xs:element type="xs:short" name="GDP_2015"/>
-        <xs:element type="xs:float" name="Suicide_Rate_2015"/>
-        <xs:element type="xs:float" name="GDP_2016"/>
-        <xs:element type="xs:float" name="Suicide_Rate_2016"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+    <xs:element name="CountryGDP">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Country" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="Country"/>
+                            <xs:element type="xs:string" name="Country_Code"/>
+                            <xs:element type="xs:float" name="GDP_2000" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2000" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2005" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2005" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2010" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2010" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2015" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2015" default="0.0"/>
+                            <xs:element type="xs:float" name="GDP_2016" default="0.0"/>
+                            <xs:element type="xs:float" name="Suicide_Rate_2016" default="0.0"/>
+                        </xs:sequence> 
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
