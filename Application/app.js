@@ -12,12 +12,18 @@ app.use(xmlparser());
 const worldGDP_insert = require('../Puts/worldGDP_insert.js');
 const worldAlcohol_insert = require('../Puts/worldAlcohol_insert.js');
 const worldHappyness_insert = require('../Puts/worldHappyness_insert.js');
+
 const worldGDP_update = require('../Updates/worldGDP_update.js');
 const worldHappyness_update = require('../Updates/worldHappyness_update.js');
 const worldAlcohol_update = require('../Updates/worldAlcohol_update.js');
+
 const worldHappyness_select = require('../Selects/countryHappyness_select.js');
 const worldGDP_select = require('../Selects/countryGDP_select.js');
 const worldAlcohol_select = require('../Selects/countryAlcohol_select.js');
+
+const worldGDP_delete = require('../Deletes/worldGDP_delete.js');
+const worldHappyness_delete = require('../Deletes/worldHappyness_delete.js');
+const worldAlcohol_delete = require('../Deletes/worldAlcohol_delete.js');
 
 //use defined routes
 app.use('/worldGDP_insert', worldGDP_insert);
@@ -32,6 +38,9 @@ app.use('/worldGDP_select', worldGDP_select);
 app.use('/worldHappyness_select', worldHappyness_select);
 app.use('/worldAlcohol_select', worldAlcohol_select);
 
+app.use('/worldGDP_delete', worldGDP_delete);
+app.use('/worldHappyness_delete', worldHappyness_delete);
+app.use('/worldAlcohol_delete', worldAlcohol_delete);
 
 //setting port
 app.listen(3000, function () {

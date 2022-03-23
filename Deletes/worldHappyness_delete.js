@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const dbconnection = require('../DBConnection.js');
 
-app.delete('/deleteCountrygdp', (req, res, next) => {
+app.delete('/deleteCountryhappyness', (req, res, next) => {
     if (req.headers['content-type'] === "application/json") {
-        var sql = `DELETE FROM countrygdp WHERE Country = '${req.body.Country}'`;
+        console.log(req.body.Country);
+        var sql = `DELETE FROM countryhappyness WHERE Country = '${req.body.Country}'`;
         
         dbconnection.query(sql, function (err) {
             if (err) throw err;
@@ -14,7 +15,7 @@ app.delete('/deleteCountrygdp', (req, res, next) => {
         var json = JSON.stringify(req.body);
         var jsonObj = JSON.parse(json);
 
-        var sql = `DELETE FROM countrygdp WHERE Country = '${jsonObj.country.country[0]}'`;
+        var sql = `DELETE FROM countryhappyness WHERE Country = '${jsonObj.country.country[0]}'`;
         dbconnection.query(sql, function (error, result) {
             if (error) {
                 throw error;
