@@ -81,6 +81,7 @@ app.post('/countrygdp', (req, res, next) => {
                 if (err) {
                     return next(err)
                 }
+                result = result.valid
                 var sql = `INSERT INTO countrygdp (Country, Country_Code, GDP_2000, Suicide_Rate_2000, GDP_2005, Suicide_Rate_2005, GDP_2010, Suicide_Rate_2010, GDP_2015, Suicide_Rate_2015, GDP_2016, Suicide_Rate_2016) VALUES ("${jsonObj.country.country[0]}", "${jsonObj.country.country_code[0]}", "${jsonObj.country.gdp_2000[0]}", "${jsonObj.country.suicide_rate_2000[0]}", "${jsonObj.country.gdp_2005[0]}", "${jsonObj.country.suicide_rate_2005[0]}", "${jsonObj.country.gdp_2010[0]}", "${jsonObj.country.suicide_rate_2010[0]}", "${jsonObj.country.gdp_2015[0]}", "${jsonObj.country.suicide_rate_2015[0]}", "${jsonObj.country.gdp_2016[0]}", "${jsonObj.country.suicide_rate_2016[0]}")`;
 
                 dbconnection.query(sql, function (error, result) {

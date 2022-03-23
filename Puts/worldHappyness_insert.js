@@ -81,14 +81,14 @@ app.post('/countryhappyness', (req, res, next) => {
                 if (err) {
                     return next(err)
                 }
+                result = result.valid
                 var sql = `INSERT INTO countryhappyness (Country, Happyness_Rank, Happyness_Score, Whisker_high, Whisker_low, Economy, Family, Life_Expectancy, Freedom, Generosity, Gov_Trust, Dystopia_Residual) VALUES ("${jsonObj.country.country[0]}", ${jsonObj.country.happyness_rank[0]}, ${jsonObj.country.happyness_score[0]}, ${jsonObj.country.whisker_high[0]}, ${jsonObj.country.whisker_low[0]}, ${jsonObj.country.economy[0]}, ${jsonObj.country.family[0]}, ${jsonObj.country.life_expectancy[0]}, ${jsonObj.country.freedom[0]}, ${jsonObj.country.generosity[0]}, ${jsonObj.country.gov_trust[0]}, ${jsonObj.country.dystopia_residual[0]})`;
                 
                 dbconnection.query(sql, function (error, result) {
                     if (error) {
                         throw error;
                     }else {
-                        console.log()
-                        return res.status(200).send("Entry inserted: " + jsonObj.country.country[0]);
+                        return res.status(200).send("Entry updated: " + jsonObj.country.country[0]);
                     }
                 });
             });
