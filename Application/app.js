@@ -23,9 +23,11 @@ const worldAlcohol_select = require('../Selects/countryAlcohol_select.js');
 app.use('/worldGDP_insert', worldGDP_insert);
 app.use('/worldAlcohol_insert', worldAlcohol_insert);
 app.use('/worldHappyness_insert', worldHappyness_insert);
+
 app.use('/worldGDP_update', worldGDP_update);
 app.use('/worldHappyness_update', worldHappyness_update);
 app.use('/worldAlcohol_update', worldAlcohol_update);
+
 app.use('/worldGDP_select', worldGDP_select);
 app.use('/worldHappyness_select', worldHappyness_select);
 app.use('/worldAlcohol_select', worldAlcohol_select);
