@@ -4,7 +4,6 @@ const dbconnection = require('../DBConnection.js');
 
 app.delete('/deleteCountryhappyness', (req, res, next) => {
     if (req.headers['content-type'] === "application/json") {
-        console.log(req.body.Country);
         var sql = `DELETE FROM countryhappyness WHERE Country = '${req.body.Country}'`;
         
         dbconnection.query(sql, function (err) {
