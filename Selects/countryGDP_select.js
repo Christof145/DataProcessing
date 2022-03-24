@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const dbconnection = require('../DBConnection.js');
 const xml = require('object-to-xml');
 
-//  Retrieve all countries JSON
+//  Retrieve all countries in selected format
 app.get('/countrygdp', function (req, res) {
     dbconnection.query('SELECT * FROM countrygdp', function (error, results) {
         if (error) throw error;

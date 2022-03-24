@@ -75,7 +75,7 @@ app.post('/updateCountryHappyness', (req, res, next) => {
     }else if (req.headers['content-type'] === "application/xml"){
         var json = JSON.stringify(req.body);
         var jsonObj = JSON.parse(json);
-        
+        console.log(json);
         try {
             xmlvalidator.validateXML(req.rawBody, 'Xml/Country_Happyness.xsd', function(err, result) {
                 if (err) {
